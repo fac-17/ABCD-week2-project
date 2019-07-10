@@ -43,3 +43,10 @@ test('new element description is equal to newTodo', function(t) {
   t.deepEqual(actual, expected, 'new element description is equal to newTodo');
   t.end();
 });
+
+test('new element is default set to false', function(t) {
+  const actual = logic.addTodo(todos, newTodo)[logic.addTodo(todos, newTodo).length-1].done;
+  const expected = false;
+  t.deepEqual(actual, expected, 'new element description is equal to newTodo');
+  t.end();
+});

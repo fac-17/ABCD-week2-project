@@ -54,7 +54,7 @@ var todoFunctions = {
 
   markTodo: function(todos, idToMark) {
     var newTodos = todoFunctions.cloneArrayOfObjects(todos);
-
+    newTodo.split()
 
     // todos.map(x => x.includes ? false : true)
 
@@ -64,6 +64,7 @@ var todoFunctions = {
     // in the new todo array, all elements will remain unchanged except the one with id: idToMark
     // this element will have its done value toggled
     // hint: array.map
+
   },
 
 

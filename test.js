@@ -82,11 +82,16 @@ test('original todo\'s stay the same', function(t) {
     t.end();
   });
 
-  /*
-  test('check all elements (but the idToDelete) remain unchanged', function(t) {
-    const actual = logic.markTodo(todos, idToMark)[idToMark];
-    const expected = "boolean";
+
+  test('check if elements remain the same except the Done key', function(t) {
+    const actual = ???;
+    const expected = ???;
+    newTodos.map(function(item) {
+      if (item.id == idToMark) {continue};
+      
+    }
+
+    })
     t.deepEqual(actual, expected, 'check all elements (but the idToDelete) remain unchanged');
     t.end();
   });
-*/

@@ -56,6 +56,7 @@ var todoFunctions = {
     var newTodos = todoFunctions.cloneArrayOfObjects(todos);
 
 
+    // todos.map(x => x.includes ? false : true)
 
     return newTodos;
 

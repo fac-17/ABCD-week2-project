@@ -8,6 +8,9 @@ var todos = [
 var newTodo = { description: 'make smoothie' };
 
 
+
+/* TESTS RELATING TO THE addTodo FUNCTION */
+
 test('addTodo returns an object', function(t) {
   const actual = typeof logic.addTodo(todos, newTodo);
   const expected = "object";
@@ -15,11 +18,11 @@ test('addTodo returns an object', function(t) {
   t.end();
 });
 
-test('originial todo\'s stay the same', function(t) {
+test('original todo\'s stay the same', function(t) {
   const actual = todos;
   logic.addTodo(todos, newTodo)
   const expected = todos;
-  t.deepEqual(actual, expected, 'originial todo\'s stay the same');
+  t.deepEqual(actual, expected, 'original todo\'s stay the same');
   t.end();
 });
 
@@ -54,6 +57,20 @@ test('new element is default set to false', function(t) {
 test('new element ID is a number', function(t) {
   const actual = typeof logic.addTodo(todos, newTodo)[logic.addTodo(todos, newTodo).length-1].id;
   const expected = 'number';
-  t.deepEqual(actual, expected, 'new element ID is a number');
+  t.deepEqual(actual, expected, 'New element ID is a number');
   t.end();
 });
+
+
+/* TESTS RELATING TO THE markTodo FUNCTION */
+
+var idToMark = 1;
+
+
+test('original todo\'s stay the same', function(t) {
+    const actual = todos;
+    logic.markTodo(todos, idToMark)
+    const expected = todos;
+    t.deepEqual(actual, expected, 'original todo\'s stay the same');
+    t.end();
+  });

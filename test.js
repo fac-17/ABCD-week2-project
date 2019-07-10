@@ -30,9 +30,9 @@ test('new todos have an additional element', function(t) {
   t.end();
 });
 
-test('new test', function(t) {
-  const actual = logic.addTodo(todos, newTodo).length;
-  const expected = todos.length + 1;
-  t.deepEqual(actual, expected, 'new test');
+test('new object has three elements within', function(t) {
+  const actual = Object.values(logic.addTodo(todos, newTodo)[logic.addTodo(todos, newTodo).length-1]).length;
+  const expected = todos.length+1;
+  t.deepEqual(actual, expected, 'new object has three elements within');
   t.end();
 });

@@ -35,7 +35,11 @@ var todoFunctions = {
 
   addTodo: function(todos, newTodo) {
       var newTodos = todoFunctions.cloneArrayOfObjects(todos)
-      newTodos.push(['test empty array'])
+      newTodos.push({
+        description: "test ",
+        done: false,
+        id: 3,
+      })
 
       return newTodos
     // should leave the input argument todos unchanged (you can use cloneArrayOfObjects)

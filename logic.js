@@ -38,9 +38,8 @@ var todoFunctions = {
       newTodos.push({
         description: newTodo.description,
         done: false,
-        id: 3,
+        id: todoFunctions.generateId(),
       })
-
       return newTodos
     // should leave the input argument todos unchanged (you can use cloneArrayOfObjects)
     // returns a new array, it should contain todos with the newTodo added to the end.

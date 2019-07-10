@@ -50,3 +50,10 @@ test('new element is default set to false', function(t) {
   t.deepEqual(actual, expected, 'new element description is equal to newTodo');
   t.end();
 });
+
+test('new element ID is a number', function(t) {
+  const actual = typeof logic.addTodo(todos, newTodo)[logic.addTodo(todos, newTodo).length-1].id;
+  const expected = 'number';
+  t.deepEqual(actual, expected, 'new element ID is a number');
+  t.end();
+});

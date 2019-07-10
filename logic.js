@@ -36,7 +36,7 @@ var todoFunctions = {
   addTodo: function(todos, newTodo) {
       var newTodos = todoFunctions.cloneArrayOfObjects(todos)
       newTodos.push({
-        description: "test ",
+        description: newTodo.description,
         done: false,
         id: 3,
       })

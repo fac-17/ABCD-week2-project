@@ -76,22 +76,21 @@ test('original todo\'s stay the same', function(t) {
   });
 
   test('check done attribute of modified element is a boolean', function(t) {
-    const actual = typeof logic.markTodo(todos, idToMark)[idToMark].done;
+    const actual = typeof logic.markTodo(todos, idToMark)[idToMark].done; // this doesn't refer to the right
     const expected = "boolean";
     t.deepEqual(actual, expected, 'check done attribute of modified element is a boolean');
     t.end();
   });
 
 
-  test('check if elements remain the same except the Done key', function(t) {
-    const actual = ???;
-    const expected = ???;
-    newTodos.map(function(item) {
-      if (item.id == idToMark) {continue};
-      
-    }
-
-    })
-    t.deepEqual(actual, expected, 'check all elements (but the idToDelete) remain unchanged');
+  test('check the idToMark element done has changed', function(t) {
+    var result = logic.markTodo(todos, idToMark);
+    const actual = result[idToMark].done !== todos[idToMark].done;
+    const expected = true;
+    //newTodos.map(function(item) {
+    //  if (item.id == idToMark) {console.log(item); continue};
+    //  else return item =
+    //}
+    t.deepEqual(actual, expected, 'check the idToMark element done has changed');
     t.end();
   });

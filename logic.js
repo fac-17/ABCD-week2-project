@@ -3,12 +3,14 @@
 // For part one we expect you to use tdd
 
 var todos = [
-  {id: 0, description: 'make tea', done: false},
+  {id: 0, description: 'make tea', done: true},
   {id: 1, description: 'make eggs', done: true},
+  {id: 2, description: 'make coffee', done: false},
+  {id: 3, description: 'make bacon', done: true},
 ]
 var newTodo = { description: 'make smoothie' };
 // var updatedTodos = addTodo(todos, newTodo);
-
+var idToMark =  2;
 
 
 var todoFunctions = {
@@ -54,7 +56,14 @@ var todoFunctions = {
 
   markTodo: function(todos, idToMark) {
     var newTodos = todoFunctions.cloneArrayOfObjects(todos);
-    newTodo.split()
+    for (let item of newTodos) {
+      if (item.id == idToMark) {
+        if (item.done == false) {item.done = true}
+        else if (item.done == true) {item.done = false}
+      } else {
+        continue;
+      }
+    }
 
     // todos.map(x => x.includes ? false : true)
 
@@ -86,4 +95,4 @@ if (typeof module !== 'undefined') {
 }
 
 
-console.log(todoFunctions.addTodo(todos, newTodo))
+console.log(todoFunctions.markTodo(todos, idToMark))

@@ -29,6 +29,15 @@
     todoNode.appendChild(newSpan);
 
 
+    // add deleteButton
+  var deleteButtonNode = document.createElement('button');
+  deleteButtonNode.addEventListener('click', function(event){
+    var newState = todoFunctions.deleteTodo(state, todo.id);
+    // update(newState);
+  });
+  todoNode.appendChild(deleteButtonNode);
+
+
     // add markTodo button
     var markTodoButtonNode = document.createElement('button');
     markTodoButtonNode.setAttribute('class', 'mark-button')
@@ -40,11 +49,6 @@
     // add classes for css
     return todoNode;
   };
-
-
-
-  // add deleteButton
-
 
 
 

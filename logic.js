@@ -54,9 +54,18 @@ var todoFunctions = {
     // should leave the input argument todos unchanged (you can use cloneArrayOfObjects)
     // return a new array, this should not contain any todo with an id of idToDelete
     // hint: array.filter
-
-
-},
+    var close = document.getElementsByTagName('button');
+    var i;
+    for (i = 0; i < close.length; i++){
+      close[i].onclick = function(){
+        var div = this.parentElement;
+        div.style.display = "none";
+      }
+    }
+  },
+//       }
+//
+// },
 
 
 

@@ -2,8 +2,8 @@
 // you can access these on todo.todoFunctions
 // For part one we expect you to use tdd
 
-/*
-USED FOR TESTING
+
+/* USED FOR TESTING
 var todos = [
   {id: 0, description: 'make tea', done: true},
   {id: 1, description: 'make eggs', done: true},
@@ -13,6 +13,7 @@ var todos = [
 var newTodo = { description: 'make smoothie' };
 // var updatedTodos = addTodo(todos, newTodo);
 var idToMark =  2;
+var idToDelete =  2;
 */
 
 var todoFunctions = {
@@ -51,17 +52,18 @@ var todoFunctions = {
   },
 
   deleteTodo: function(todos, idToDelete) {
-    // should leave the input argument todos unchanged (you can use cloneArrayOfObjects)
-    // return a new array, this should not contain any todo with an id of idToDelete
-    // hint: array.filter
-    var close = document.getElementsByTagName('button');
-    var i;
-    for (i = 0; i < close.length; i++){
-      close[i].onclick = function(){
-        var div = this.parentElement;
-        div.style.display = "none";
+
+    var newTodos = todoFunctions.cloneArrayOfObjects(todos);
+    for (let x = 0; x < newTodos.length; x++) {
+      if (newTodos[x].id == idToDelete) {
+        newTodos.splice(x, 1)
       }
     }
+    return newTodos
+
+    var words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+    const result = words.filter(word => word.length > 6);
+
   },
 //       }
 //
@@ -89,16 +91,7 @@ var todoFunctions = {
         continue;
       }
     }
-
-    // todos.map(x => x.includes ? false : true)
-
     return newTodos;
-
-    // should leave the input argument todos unchanged (you can use cloneArrayOfObjects)
-    // in the new todo array, all elements will remain unchanged except the one with id: idToMark
-    // this element will have its done value toggled
-    // hint: array.map
-
   },
 
 
@@ -118,6 +111,3 @@ var todoFunctions = {
 if (typeof module !== 'undefined') {
   module.exports = todoFunctions;
 }
-
-
-// console.log(todoFunctions.markTodo(todos, idToMark))

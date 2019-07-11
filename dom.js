@@ -35,14 +35,14 @@
     });
     todoNode.appendChild(deleteButtonNode);
 
-    // add markTodo button
+    /* add markTodo button
     var deleteButtonNode = document.createElement('button');
     deleteButtonNode.addEventListener('click', function(event) {
       var newState = todoFunctions.deleteTodo(state, todo.id);
       update(newState);
     });
     todoNode.appendChild(deleteButtonNode);
-
+*/
     // add classes for css
 
     return todoNode;
@@ -57,7 +57,7 @@
       // what is inside event.target?
       var description = event.target.value // event.target ....
       var newState = todoFunctions.addTodo(state, description); // ?? change this!
-      event.target.innerText = '';
+      event.target.reset();
       update(newState);
     });
   }

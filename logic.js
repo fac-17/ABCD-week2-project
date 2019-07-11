@@ -70,11 +70,16 @@ var todoFunctions = {
     var newTodos = todoFunctions.cloneArrayOfObjects(todos);
     for (let item of newTodos) {
       if (item.id == idToMark) {
-        if (item.done == false) {item.done = true}
-        else if (item.done == true) {item.done = false}
+        if (item.done == false) {
+          item.done = true
+        }
+        else if (item.done == true) {
+          item.done = false
+        }
       } else {
         continue;
       }
+      console.log(newTodos);
     }
     return newTodos;
   },

@@ -15,17 +15,17 @@
   // This function takes a todo, it returns the DOM node representing that todo
   var createTodoNode = function(todo) {
     var todoNode = document.createElement('li');
-    todoNode.addEventListener('click', function() {
-      todoFunctions.markTodo();
+    /* todoNode.addEventListener('click', function() {
+    //  var idNeeded = state[]
+      todoFunctions.markTodo(state, event.target.id);
+      console.log(event.target);
       // something needed in here?
     })
     // you will need to use addEventListener
-    // add span holding description
+    // add span holding description */
     var newSpan = document.createElement('span');
     newSpan.innerText = todo.description;
-    // var description = document.getElementsByName('description')[0] TEMPORARY TEST
     todoNode.appendChild(newSpan);
-
 
     // this adds the delete button
     var deleteButtonNode = document.createElement('button');
@@ -36,6 +36,12 @@
     todoNode.appendChild(deleteButtonNode);
 
     // add markTodo button
+    var deleteButtonNode = document.createElement('button');
+    deleteButtonNode.addEventListener('click', function(event) {
+      var newState = todoFunctions.deleteTodo(state, todo.id);
+      update(newState);
+    });
+    todoNode.appendChild(deleteButtonNode);
 
     // add classes for css
 
@@ -49,13 +55,9 @@
       event.preventDefault();
       // https://developer.mozilla.org/en-US/docs/Web/Events/submit
       // what is inside event.target?
-
-      var description = document.getElementsByName('description')[0]; // event.target ....
-
-      console.log(description);
-      // hint: todoFunctions.addTodo
+      var description = event.target.value // event.target ....
       var newState = todoFunctions.addTodo(state, description); // ?? change this!
-      console.log(newState);
+      event.target.innerText = '';
       update(newState);
     });
   }

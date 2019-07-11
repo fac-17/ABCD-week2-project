@@ -1,0 +1,95 @@
+/* ENTIRE FORM */
+html {
+}
+/*orange - e86742
+blue - 2f537d
+yellow - f5af41
+pink - ea7278*/
+
+body {
+  background: #2f537d;
+  width: 100vw;
+  max-width: 600px;
+  margin: 20px auto;
+  min-width: 300px;
+}
+
+#add-todo {
+  margin-bottom: 30px;
+}
+
+#input-field {
+  width: 70%;
+  height: 40px;
+  border-radius: 10px;
+  font-size: 2em;
+  color: #ea7278;
+  margin-left: 20px;
+  background: none;
+  padding: 3px;
+  border: 2px #f5af41 solid;
+}
+
+#input-field:focus {
+  outline:0; /* avoids blue shadow when clicking on button */
+}
+
+@media (max-width: 500px) {
+  #input-field {
+    width: 60%;
+  }
+}
+
+#input-button {
+  width: 50px;
+  float: right;
+  height: 50px;
+  font-size: 1.6em;
+  border-radius: 10px;
+  margin-right: 20px;
+  background: none;
+  color: #f5af41;
+  border: 2px #f5af41 solid;
+}
+/* TO DO TEXT */
+.todo-text {
+
+  font-size: 1.6em;
+}
+
+#todo-unit {
+  height: 50px;
+  margin-bottom: 10px;
+  margin-left: -20px;
+
+
+  height: 45px;
+  font-size: 1.2em;
+  color: #ea7278;
+  background: none;
+  padding: 3px;
+  /*
+  border-radius: 10px;
+  border: 2px #ea7278 solid;
+  margin-right: 20px;
+  */
+}
+
+/* MARK BUTTON */
+.mark-button {
+  width: 50px;
+  float: right;
+  height: 50px;
+  font-size: 2em;
+  border-radius: 10px;
+  margin-right: 17px;
+  background: none;
+  color: #f5af41;
+  border: 2px #f5af41 solid;
+
+
+}
+
+#todo-block {
+  list-style: none;
+}

@@ -54,7 +54,21 @@ var todoFunctions = {
     // should leave the input argument todos unchanged (you can use cloneArrayOfObjects)
     // return a new array, this should not contain any todo with an id of idToDelete
     // hint: array.filter
-  },
+
+
+},
+
+
+
+    /*var crossTodo = document.getElementsByTagName("ul");
+    var i;
+    for (i = 0; i < crossTodo.length; i++) {
+      // var span = document.createElement("SPAN");
+      var txt = document.createTextNode("\u00D7");
+      // span.className = "close";
+      span.appendChild(txt);
+     // myNodelist[i].appendChild(span);
+   },*/
 
   markTodo: function(todos, idToMark) {
     var newTodos = todoFunctions.cloneArrayOfObjects(todos);

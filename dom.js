@@ -25,24 +25,29 @@
     // add span holding description */
     var newSpan = document.createElement('span');
     newSpan.innerText = todo.description;
+    newSpan.setAttribute('class', 'todo-text')
     todoNode.appendChild(newSpan);
-
-    // this adds the delete button
+    /* this adds the delete button
     var deleteButtonNode = document.createElement('button');
     deleteButtonNode.addEventListener('click', function(event) {
       var newState = todoFunctions.deleteTodo(state, todo.id);
       update(newState);
     });
     todoNode.appendChild(deleteButtonNode);
+    */
 
-    /* add markTodo button
-    var deleteButtonNode = document.createElement('button');
-    deleteButtonNode.addEventListener('click', function(event) {
-      var newState = todoFunctions.deleteTodo(state, todo.id);
+    // add markTodo button
+    var markTodoButtonNode = document.createElement('button');
+    markTodoButtonNode.setAttribute('class', 'mark-button')
+    console.log(markTodoButtonNode);
+    markTodoButtonNode.addEventListener('click', function(event) {
+      var newState = todoFunctions.markTodo(state, todo.done);
       update(newState);
+
+      console.log(state);
     });
-    todoNode.appendChild(deleteButtonNode);
-*/
+    todoNode.appendChild(markTodoButtonNode);
+
     // add classes for css
 
     return todoNode;

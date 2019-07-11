@@ -11,19 +11,27 @@ body {
   width: 100vw;
   max-width: 600px;
   margin: 20px auto;
-  padding: 0px;
   min-width: 300px;
 }
+
 #add-todo {
-  border: 1px orange dotted;
+  margin-bottom: 30px;
 }
 
 #input-field {
-  width: 80%;
-  height: 45px;
+  width: 70%;
+  height: 40px;
   border-radius: 10px;
   font-size: 2em;
+  color: #ea7278;
   margin-left: 20px;
+  background: none;
+  padding: 3px;
+  border: 2px #f5af41 solid;
+}
+
+#input-field:focus {
+  outline:0; /* avoids blue shadow when clicking on button */
 }
 
 @media (max-width: 500px) {
@@ -36,13 +44,16 @@ body {
   width: 50px;
   float: right;
   height: 50px;
-  background: red;
+  font-size: 1.6em;
   border-radius: 10px;
   margin-right: 20px;
+  background: none;
+  color: #f5af41;
+  border: 2px #f5af41 solid;
 }
 /* TO DO TEXT */
 .todo-text {
-  border: 1px blue dotted;
+
   font-size: 1.6em;
 }
 
@@ -50,7 +61,18 @@ body {
   height: 50px;
   margin-bottom: 10px;
   margin-left: -20px;
-  border: 2px black solid;
+
+
+  height: 45px;
+  font-size: 1.2em;
+  color: #ea7278;
+  background: none;
+  padding: 3px;
+  /*
+  border-radius: 10px;
+  border: 2px #ea7278 solid;
+  margin-right: 20px;
+  */
 }
 
 /* MARK BUTTON */
@@ -58,14 +80,16 @@ body {
   width: 50px;
   float: right;
   height: 50px;
+  font-size: 2em;
   border-radius: 10px;
-  margin-right: 20px;
+  margin-right: 17px;
+  background: none;
+  color: #f5af41;
+  border: 2px #f5af41 solid;
 
-  border: 1px green dotted;
+
 }
 
 #todo-block {
   list-style: none;
-
-  border: 1px red dotted;
 }

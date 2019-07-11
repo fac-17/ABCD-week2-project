@@ -2,6 +2,8 @@
 // you can access these on todo.todoFunctions
 // For part one we expect you to use tdd
 
+/*
+USED FOR TESTING
 var todos = [
   {id: 0, description: 'make tea', done: true},
   {id: 1, description: 'make eggs', done: true},
@@ -11,7 +13,7 @@ var todos = [
 var newTodo = { description: 'make smoothie' };
 // var updatedTodos = addTodo(todos, newTodo);
 var idToMark =  2;
-
+*/
 
 var todoFunctions = {
   // todoFunctions.generateId() will give you a unique id
@@ -37,7 +39,7 @@ var todoFunctions = {
   addTodo: function(todos, newTodo) {
       var newTodos = todoFunctions.cloneArrayOfObjects(todos)
       newTodos.push({
-        description: newTodo.description,
+        description: document.getElementsByName('description')[0].value,
         done: false,
         id: todoFunctions.generateId(),
       })
@@ -95,4 +97,4 @@ if (typeof module !== 'undefined') {
 }
 
 
-console.log(todoFunctions.markTodo(todos, idToMark))
+// console.log(todoFunctions.markTodo(todos, idToMark))

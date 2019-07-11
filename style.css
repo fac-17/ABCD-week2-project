@@ -1,17 +1,71 @@
-
 /* ENTIRE FORM */
-#add-todo {
+html {
+}
+/*orange - e86742
+blue - 2f537d
+yellow - f5af41
+pink - ea7278*/
 
+body {
+  background: #2f537d;
+  width: 100vw;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 0px;
+  min-width: 300px;
+}
+#add-todo {
+  border: 1px orange dotted;
 }
 
+#input-field {
+  width: 80%;
+  height: 45px;
+  border-radius: 10px;
+  font-size: 2em;
+  margin-left: 20px;
+}
+
+@media (max-width: 500px) {
+  #input-field {
+    width: 60%;
+  }
+}
+
+#input-button {
+  width: 50px;
+  float: right;
+  height: 50px;
+  background: red;
+  border-radius: 10px;
+  margin-right: 20px;
+}
 /* TO DO TEXT */
 .todo-text {
-
+  border: 1px blue dotted;
+  font-size: 1.6em;
 }
 
+#todo-unit {
+  height: 50px;
+  margin-bottom: 10px;
+  margin-left: -20px;
+  border: 2px black solid;
+}
 
 /* MARK BUTTON */
 .mark-button {
+  width: 50px;
+  float: right;
+  height: 50px;
+  border-radius: 10px;
+  margin-right: 20px;
 
-  
+  border: 1px green dotted;
+}
+
+#todo-block {
+  list-style: none;
+
+  border: 1px red dotted;
 }

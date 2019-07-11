@@ -76,7 +76,7 @@ body {
 }
 
 /* MARK BUTTON */
-.mark-button {
+.mark-button, .delete-button {
   width: 50px;
   float: right;
   height: 50px;

@@ -33,7 +33,7 @@
     /* this adds the delete button     */
     var deleteButtonNode = document.createElement('button');
     deleteButtonNode.setAttribute("class", "delete-button");
-    deleteButtonNode.innerHTML = 'x';
+    deleteButtonNode.innerHTML = '❌';
     deleteButtonNode.addEventListener('click', function(event) {
       var newState = todoFunctions.deleteTodo(state, todo.id);
       update(newState);
@@ -43,14 +43,24 @@
 
     // add markTodo button
     var markTodoButtonNode = document.createElement("button");
-    markTodoButtonNode.setAttribute("class", "mark-button");
-    markTodoButtonNode.addEventListener("click", function(event) {
-      var newState = todoFunctions.markTodo(state, todo.id);
-      //var newButton = "test";
-      //markTodoButtonNode.innerText = newButton;
-      update(newState);
-    });
+    markTodoButtonNode.setAttribute("class", "mark-button");//it creates the button
     todoNode.appendChild(markTodoButtonNode);
+
+    // if (todo.done == false) {markTodoButtonNode.setAttribute('style', 'background-color: #2f537d;')}
+    if (todo.done) {markTodoButtonNode.textContent= "✅"}
+    // if (todo.done == true) {markTodoButtonNode.setAttribute('style', 'background-color: green;')}
+
+    //hint
+    // if (todo.done) {
+    //   markTodoButtonNode.textContent = "✅";
+    // }
+
+
+    todoNode.addEventListener("click", function(e) {
+    var newState = todoFunctions.markTodo(state, todo.id);
+    update(newState);
+    
+    });
 
     // add classes for css
 

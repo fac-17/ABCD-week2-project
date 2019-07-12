@@ -6,7 +6,11 @@
   var container = document.getElementById("todo-container");
   var addTodoForm = document.getElementById("add-todo");
 
-  var state = []; // this is our initial todoList
+  var state = [
+    {id: -3, description: 'Create to-do list app', done: true},
+    {id: -2, description: 'Find some stuff to do', done: false},
+    {id: -1, description: 'Take a break', done: false},
+]; // this is our initial todoList
 
   // This function takes a todo, it returns the DOM node representing that todo
   var createTodoNode = function(todo) {

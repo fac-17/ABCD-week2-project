@@ -27,8 +27,11 @@ h1 {
   text-align: center;
   font-family: "Raleway", sans-serif;
   color: #ea7278;
-  text-transform: uppercase;
 
+}
+
+button {
+  cursor: pointer;
 }
 
 #add-todo {
@@ -68,6 +71,8 @@ h1 {
   background: none;
   color: #f5af41;
   border: 2px #f5af41 solid;
+  cursor: pointer;
+  padding-bottom: 5px;
 }
 /* TO DO TEXT */
 .todo-text {
@@ -103,18 +108,8 @@ h1 {
   background: none;
   color: #f5af41;
   border: 2px #f5af41 solid;
-}
-
-.mark-button-green {
-  width: 50px;
-  float: right;
-  height: 50px;
-  font-size: 1.6em;
-  border-radius: 10px;
-  margin-right: 17px;
-  background: green;
-  color: #f5af41;
-  border: 2px #f5af41 solid;
+  cursor: pointer;
+  padding-bottom: 5px;
 }
 
 .delete-button {
@@ -127,7 +122,8 @@ h1 {
   background: none;
   color: #f5af41;
   border: 2px #f5af41 solid;
-  background-color:
+  cursor: pointer;
+  padding-bottom: 5px;
 }
 
 #todo-block {

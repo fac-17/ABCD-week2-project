@@ -1,6 +1,7 @@
 /* ENTIRE FORM */
 html {
   font-family: "Raleway", sans-serif;
+  min-width: 300px;
 }
 /*orange - e86742
 blue - 2f537d
@@ -35,10 +36,15 @@ body {
   background: none;
   padding: 3px;
   border: 2px #f5af41 solid;
+  font-family: "Raleway", sans-serif;
 }
 
 #input-field:focus {
-  outline: 0; /* avoids blue shadow when clicking on button */
+  outline: 1px #e86742;
+  border: 1px solid #e86742 !important;
+  box-shadow: 0 0 3px #e86742 !important;
+  -moz-box-shadow: 0 0 3px #e86742 !important;
+  -webkit-box-shadow: 0 0 3px #e86742 !important;
 }
 
 @media (max-width: 500px) {
@@ -116,7 +122,7 @@ body {
   background: none;
   color: #f5af41;
   border: 2px #f5af41 solid;
-  background-color:
+  background-color: ;
 }
 
 #todo-block {

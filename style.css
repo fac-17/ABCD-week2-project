@@ -81,17 +81,42 @@ body {
 }
 
 /* MARK BUTTON */
-.mark-button,
-.delete-button {
+
+.mark-button {
   width: 50px;
   float: right;
   height: 50px;
-  font-size: 2em;
+  font-size: 1.6em;
   border-radius: 10px;
   margin-right: 17px;
   background: none;
   color: #f5af41;
   border: 2px #f5af41 solid;
+}
+
+.mark-button-green {
+  width: 50px;
+  float: right;
+  height: 50px;
+  font-size: 1.6em;
+  border-radius: 10px;
+  margin-right: 17px;
+  background: green;
+  color: #f5af41;
+  border: 2px #f5af41 solid;
+}
+
+.delete-button {
+  width: 50px;
+  float: right;
+  height: 50px;
+  font-size: 1.6em;
+  border-radius: 10px;
+  margin-right: 17px;
+  background: none;
+  color: #f5af41;
+  border: 2px #f5af41 solid;
+  background-color:
 }
 
 #todo-block {

@@ -2,7 +2,6 @@
 // you can access these on todo.todoFunctions
 // For part one we expect you to use tdd
 
-
 /* USED FOR TESTING
 var todos = [
   {id: 0, description: 'make tea', done: true},
@@ -32,7 +31,7 @@ var todoFunctions = {
   //cloneArrayOfObjects will create a copy of the todos array
   //changes to the new array don't affect the original
   cloneArrayOfObjects: function(todos) {
-    return todos.map(function(todo){
+    return todos.map(function(todo) {
       return JSON.parse(JSON.stringify(todo));
     });
   },
@@ -52,52 +51,37 @@ var todoFunctions = {
   },
 
   deleteTodo: function(todos, idToDelete) {
-
     var newTodos = todoFunctions.cloneArrayOfObjects(todos);
     for (let x = 0; x < newTodos.length; x++) {
       if (newTodos[x].id == idToDelete) {
-        newTodos.splice(x, 1)
+        newTodos.splice(x, 1);
       }
     }
-    return newTodos
-
-    var words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
-    const result = words.filter(word => word.length > 6);
-
+    return newTodos;
   },
 
   markTodo: function(todos, idToMark) {
     var newTodos = todoFunctions.cloneArrayOfObjects(todos);
     for (let item of newTodos) {
       if (item.id == idToMark) {
-        if (item.done == false) {
-          item.done = true
-        }
-        else if (item.done == true) {
-          item.done = false
-        }
-      } else {
-        continue;
+        item.done ? (item.done = false) : (item.done = true);
       }
-      console.log(newTodos);
     }
     return newTodos;
   },
-
 
   sortTodos: function(todos, sortFunction) {
     // stretch goal! Do this last
     // should leave the input arguement todos unchanged (you can use cloneArrayOfObjects)
     // sortFunction will have same signature as the sort function in array.sort
     // hint: array.slice, array.sort
-  },
+  }
 };
-
 
 // Why is this if statement necessary?
 // The answer has something to do with needing to run code both in the browser and in Node.js
 // See this article for more details:
 // http://www.matteoagosti.com/blog/2013/02/24/writing-javascript-modules-for-both-browser-and-node/
-if (typeof module !== 'undefined') {
+if (typeof module !== "undefined") {
   module.exports = todoFunctions;
 }

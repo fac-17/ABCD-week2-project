@@ -31,24 +31,28 @@
     todoNode.appendChild(newSpan);
 
     /* this adds the delete button     */
-    var deleteButtonNode = document.createElement('button');
+    var deleteButtonNode = document.createElement("button");
     deleteButtonNode.setAttribute("class", "delete-button");
-    deleteButtonNode.innerHTML = 'x';
-    deleteButtonNode.addEventListener('click', function(event) {
+    deleteButtonNode.innerHTML = "❌";
+    deleteButtonNode.addEventListener("click", function(event) {
       var newState = todoFunctions.deleteTodo(state, todo.id);
       update(newState);
     });
     todoNode.appendChild(deleteButtonNode);
 
-
     // add markTodo button
     var markTodoButtonNode = document.createElement("button");
     markTodoButtonNode.setAttribute("class", "mark-button");
-    if (todo.done == false) {markTodoButtonNode.setAttribute('style', 'background-color: #2f537d;')}
-    if (todo.done == true) {markTodoButtonNode.innerText = 'v'}
-    if (todo.done == true) {markTodoButtonNode.setAttribute('style', 'background-color: green;')}
-    if (todo.done == false) {todoNode.setAttribute('style', 'opacity: 1;')}
-    if (todo.done == true) {todoNode.setAttribute('style', 'opacity: 0.7;')}
+    if (todo.done == false) {
+      markTodoButtonNode.setAttribute("style", "background-color: #2f537d;");
+      todoNode.setAttribute('style', 'opacity: 1;');
+    }
+    if (todo.done == true) {
+      markTodoButtonNode.innerText = "✅";
+      markTodoButtonNode.setAttribute("style", "background-color: green;");
+      todoNode.setAttribute('style', 'opacity: 0.7;');
+    }
+    
     markTodoButtonNode.addEventListener("click", function(event) {
       var newState = todoFunctions.markTodo(state, todo.id);
       // markTodoButtonNode.innerHTML = 'test'

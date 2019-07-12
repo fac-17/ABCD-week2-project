@@ -42,7 +42,7 @@ test('new object has three elements within', function(t) {
 
 test('new element description is equal to newTodo', function(t) {
   const actual = logic.addTodo(todos, newTodo)[logic.addTodo(todos, newTodo).length-1].description;
-  const expected = newTodo.description;
+  const expected = newTodo;
   t.deepEqual(actual, expected, 'new element description is equal to newTodo');
   t.end();
 });

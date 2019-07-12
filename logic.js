@@ -40,7 +40,7 @@ var todoFunctions = {
   addTodo: function(todos, newTodo) {
       var newTodos = todoFunctions.cloneArrayOfObjects(todos)
       newTodos.push({
-        description: document.getElementsByName('description')[0].value,
+        description: newTodo,
         done: false,
         id: todoFunctions.generateId(),
       })

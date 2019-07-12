@@ -48,7 +48,7 @@
       todoNode.setAttribute('style', 'opacity: 1;');
     }
     if (todo.done == true) {
-      markTodoButtonNode.innerText = "✅";
+      markTodoButtonNode.innerText = "✔";
       markTodoButtonNode.setAttribute("style", "background-color: green;");
       todoNode.setAttribute('style', 'opacity: 0.7;');
     }

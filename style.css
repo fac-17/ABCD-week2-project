@@ -9,7 +9,7 @@ yellow - f5af41
 pink - ea7278*/
 
 #header {
-  background: #ea7278;
+  background: #2f537d;
   margin-bottom: 5%;
   display: block;
   position: static;
@@ -20,6 +20,19 @@ body {
   width: 100vw;
   margin: auto;
   min-width: 500px;
+  max-width: 600px;
+}
+
+h1 {
+  margin: -20px auto 30px auto;
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  color: #ea7278;
+
+}
+
+button {
+  cursor: pointer;
 }
 
 #add-todo {
@@ -30,7 +43,7 @@ body {
   width: 70%;
   height: 40px;
   border-radius: 10px;
-  font-size: 2em;
+  font-size: 1.6em;
   color: #ea7278;
   margin-left: 20px;
   background: none;
@@ -51,6 +64,17 @@ body {
   #input-field {
     width: 60%;
   }
+  body {
+    font-size: 1em;
+  }
+  #input-button {
+    width: 30px;
+    height: 30px;
+  }
+  .todo-text {
+    font-size: 1.2em;
+  }
+
 }
 
 #input-button {
@@ -63,6 +87,8 @@ body {
   background: none;
   color: #f5af41;
   border: 2px #f5af41 solid;
+  cursor: pointer;
+  padding-bottom: 5px;
 }
 /* TO DO TEXT */
 .todo-text {
@@ -79,6 +105,7 @@ body {
   color: #ea7278;
   background: none;
   padding: 3px;
+
   /*
   border-radius: 10px;
   border: 2px #ea7278 solid;
@@ -98,18 +125,8 @@ body {
   background: none;
   color: #f5af41;
   border: 2px #f5af41 solid;
-}
-
-.mark-button-green {
-  width: 50px;
-  float: right;
-  height: 50px;
-  font-size: 1.6em;
-  border-radius: 10px;
-  margin-right: 17px;
-  background: green;
-  color: #f5af41;
-  border: 2px #f5af41 solid;
+  cursor: pointer;
+  padding-bottom: 5px;
 }
 
 .delete-button {
@@ -122,7 +139,9 @@ body {
   background: none;
   color: #f5af41;
   border: 2px #f5af41 solid;
-  background-color: ;
+  cursor: pointer;
+  padding-bottom: 5px;
+
 }
 
 #todo-block {

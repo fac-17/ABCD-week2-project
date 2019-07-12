@@ -6,7 +6,11 @@
   var container = document.getElementById("todo-container");
   var addTodoForm = document.getElementById("add-todo");
 
-  var state = []; // this is our initial todoList
+  var state = [
+    {id: -3, description: 'Create to-do list app', done: true},
+    {id: -2, description: 'Find some stuff to do', done: false},
+    {id: -1, description: 'Take a break', done: false},
+]; // this is our initial todoList
 
   // This function takes a todo, it returns the DOM node representing that todo
   var createTodoNode = function(todo) {
@@ -41,13 +45,14 @@
     markTodoButtonNode.setAttribute("class", "mark-button");
     if (todo.done == false) {
       markTodoButtonNode.setAttribute("style", "background-color: #2f537d;");
+      todoNode.setAttribute('style', 'opacity: 1;');
     }
     if (todo.done == true) {
       markTodoButtonNode.innerText = "✅";
-    }
-    if (todo.done == true) {
       markTodoButtonNode.setAttribute("style", "background-color: green;");
+      todoNode.setAttribute('style', 'opacity: 0.7;');
     }
+    
     markTodoButtonNode.addEventListener("click", function(event) {
       var newState = todoFunctions.markTodo(state, todo.id);
       // markTodoButtonNode.innerHTML = 'test'

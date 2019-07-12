@@ -71,10 +71,11 @@
       event.preventDefault();
       // https://developer.mozilla.org/en-US/docs/Web/Events/submit
       // what is inside event.target?
-      var description = event.target.value; // event.target ....
+      console.log(event.target.description.value);
+      var description = event.target.description.value; // event.target ....
       var newState = todoFunctions.addTodo(state, description); // ?? change this!
-      event.target.reset();
       update(newState);
+      event.target.reset();
     });
   }
 

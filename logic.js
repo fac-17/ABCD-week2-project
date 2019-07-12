@@ -36,10 +36,10 @@ var todoFunctions = {
     });
   },
 
-  addTodo: function(todos, newTodo) {
+  addTodo: function(todos, description) {
       var newTodos = todoFunctions.cloneArrayOfObjects(todos)
       newTodos.push({
-        description: newTodo,
+        description: description,
         done: false,
         id: todoFunctions.generateId(),
       })

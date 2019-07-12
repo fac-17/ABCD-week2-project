@@ -43,6 +43,8 @@
     if (todo.done == false) {markTodoButtonNode.setAttribute('style', 'background-color: #2f537d;')}
     if (todo.done == true) {markTodoButtonNode.innerText = 'v'}
     if (todo.done == true) {markTodoButtonNode.setAttribute('style', 'background-color: green;')}
+    if (todo.done == false) {todoNode.setAttribute('style', 'opacity: 1;')}
+    if (todo.done == true) {todoNode.setAttribute('style', 'opacity: 0.7;')}
     markTodoButtonNode.addEventListener("click", function(event) {
       var newState = todoFunctions.markTodo(state, todo.id);
       // markTodoButtonNode.innerHTML = 'test'

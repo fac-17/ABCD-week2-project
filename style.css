@@ -8,7 +8,7 @@ yellow - f5af41
 pink - ea7278*/
 
 #header {
-  background: #ea7278;
+  background: #2f537d;
   margin-bottom: 5%;
   display: block;
   position: static;
@@ -19,6 +19,16 @@ body {
   width: 100vw;
   margin: auto;
   min-width: 500px;
+  max-width: 600px;
+}
+
+h1 {
+  margin: -20px auto 30px auto;
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  color: #ea7278;
+  text-transform: uppercase;
+
 }
 
 #add-todo {
@@ -35,6 +45,7 @@ body {
   background: none;
   padding: 3px;
   border: 2px #f5af41 solid;
+  font-family: "Raleway", sans-serif;
 }
 
 #input-field:focus {
